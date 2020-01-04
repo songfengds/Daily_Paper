@@ -11,11 +11,12 @@ diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）
 作者是几个IEEE，文中有其收敛性证明，先码起来，周末再研究一下，他人的学习笔记可以先参考：https://youyou-tech.com/2019/12/28/%E8%AE%A4%E8%AF%86DiffGrad%EF%BC%9A%E6%96%B0%E5%9E%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BC%98%E5%8C%96%E5%99%A8/
 
 ### 2020.01.03
-[PointRend: Image Segmentation as Rendering](https://arxiv.org/abs/1912.08193)
 
 ### 2020.01.04
-[Gaussian Error Linear Units (GELUs)](https://arxiv.org/abs/1606.08415)
-Swish
 
 ### 2020.01.05
+
+[PointRend: Image Segmentation as Rendering](https://arxiv.org/abs/1912.08193)
+[Gaussian Error Linear Units (GELUs)](https://arxiv.org/abs/1606.08415)Swish
 [NAS evaluation is frustratingly hard](https://arxiv.org/abs/1912.12522)
+[Learning to segment images with classification labels](https://arxiv.org/abs/1912.12533)
