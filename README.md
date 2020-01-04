@@ -16,6 +16,8 @@ diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）
 
 ### 2020.01.05
 
+### Paper Set
+
 [PointRend: Image Segmentation as Rendering](https://arxiv.org/abs/1912.08193)
 
 [Gaussian Error Linear Units (GELUs)](https://arxiv.org/abs/1606.08415)Swish
@@ -23,3 +25,5 @@ diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）
 [NAS evaluation is frustratingly hard](https://arxiv.org/abs/1912.12522)
 
 [Learning to segment images with classification labels](https://arxiv.org/abs/1912.12533)
+
+[Graph-FCN for image semantic segmentation](https://arxiv.org/abs/2001.00335)
