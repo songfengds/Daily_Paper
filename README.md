@@ -27,3 +27,8 @@ diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）
 [Learning to segment images with classification labels](https://arxiv.org/abs/1912.12533)
 
 [Graph-FCN for image semantic segmentation](https://arxiv.org/abs/2001.00335)
+
+[Deep Snake for Real-Time Instance Segmentation](https://128.84.21.199/abs/2001.01629?context=cs)
+
+[Deeper Insights into Weight Sharing in Neural Architecture Search](https://arxiv.org/abs/2001.01431)
+OpenReviewer: https://openreview.net/forum?id=ryxmrpNtvH
