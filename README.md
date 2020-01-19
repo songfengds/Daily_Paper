@@ -32,3 +32,5 @@ diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）
 
 [Deeper Insights into Weight Sharing in Neural Architecture Search](https://arxiv.org/abs/2001.01431)
 OpenReviewer: https://openreview.net/forum?id=ryxmrpNtvH
+
+[Bridging the gap between AI and Healthcare sides: towards developing clinically relevant AI-powered diagnosis systems](https://arxiv.org/abs/2001.03923)
