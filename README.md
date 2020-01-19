@@ -10,11 +10,12 @@ diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）
 
 作者是几个IEEE，文中有其收敛性证明，先码起来，周末再研究一下，他人的学习笔记可以先参考：https://youyou-tech.com/2019/12/28/%E8%AE%A4%E8%AF%86DiffGrad%EF%BC%9A%E6%96%B0%E5%9E%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BC%98%E5%8C%96%E5%99%A8/
 
-### 2020.01.03
+### 2020.01.19
+[Image Segmentation Using Deep Learning: A Survey](https://arxiv.org/abs/2001.05566)
 
-### 2020.01.04
+他人的解读： [纽约大学发布「深度学习图像分割」最新综述论文，带你全面了解100个10大类深度图像分割算法](https://mp.weixin.qq.com/s?__biz=MzU2OTA0NzE2NA==&mid=2247519342&idx=1&sn=ace274849f033eee582276a505181daf&chksm=fc866d7dcbf1e46bc78c5d801bac8f9798929375459ffbd824002f633e9d8b992c984912a845&mpshare=1&scene=1&srcid=&sharer_sharetime=1579425668727&sharer_shareid=c37ff2288ffba696afb85e962505b352&exportkey=A9xRjmvz7Wko1JSHfKjG2kw%3D&pass_ticket=EI%2FDFK6tPBtIaDETwZirN5nq7eNSd%2Fo3sGmtuu1W2cJyeMbALbTZrpzcGHaiit13#rd)
 
-### 2020.01.05
+引自专知
 
 ### Paper Set
 
