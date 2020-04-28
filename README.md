@@ -1,31 +1,4 @@
 # Daily_Paper
-This project is for reading a paper everyday
-
-## 2020.01 readed
-### [diffGrad: An Optimization Method for Convolutional Neural Networks](https://arxiv.org/abs/1909.11015)
-*Shiv Ram Dubey, Soumendu Chakraborty, Swalpa Kumar Roy, Snehasis Mukherjee, Satish Kumar Singh, Bidyut Baran Chaudhuri*
-> (Submitted on 12 Sep 2019 (v1), last revised 6 Mar 2020 (this version, v3))
-
-Stochastic Gradient Decent (SGD) is one of the core techniques behind the success of deep neural networks. The gradient provides information on the direction in which a function has the steepest rate of change. The main problem with basic SGD is to change by equal sized steps for all parameters, irrespective of gradient behavior. Hence, an efficient way of deep network optimization is to make adaptive step sizes for each parameter. Recently, several attempts have been made to improve gradient descent methods such as AdaGrad, AdaDelta, RMSProp and Adam. These methods rely on the square roots of exponential moving averages of squared past gradients. Thus, these methods do not take advantage of local change in gradients. In this paper, a novel optimizer is proposed based on the difference between the present and the immediate past gradient (i.e., diffGrad). In the proposed diffGrad optimization technique, the step size is adjusted for each parameter in such a way that it should have a larger step size for faster gradient changing parameters and a lower step size for lower gradient changing parameters. The convergence analysis is done using the regret bound approach of online learning framework. Rigorous analysis is made in this paper over three synthetic complex non-convex functions. The image categorization experiments are also conducted over the CIFAR10 and CIFAR100 datasets to observe the performance of diffGrad with respect to the state-of-the-art optimizers such as SGDM, AdaGrad, AdaDelta, RMSProp, AMSGrad, and Adam. The residual unit (ResNet) based Convolutional Neural Networks (CNN) architecture is used in the experiments. The experiments show that diffGrad outperforms other optimizers. Also, we show that diffGrad performs uniformly well for training CNN using different activation functions. The source code is made publicly available at this https [URL](https://github.com/shivram1987/diffGrad).
-
-文章提出SGD的问题在于迭代过程中相等的步长，不会根据梯度表现自适应。AdaGrad、AdaDelta、RMSProp、Adam都在提高梯度下降的方法，然而这些方法依赖于梯度平方的指数移动平均的平方跟，并没有利用到梯度的局部变化。本文提出了一种新的diffGrad，梯度下降的步长会自适应变化，并给出了收敛行证明。并公开了代码。
-
-diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）与Adam优化技术结合在一起来控制优化过程的学习率。diffGrad在梯度变化大的时候得到一个更高的学习率，在梯度变化小的地方得到一个低的学习率。为了避免陷入局部最优或者鞍点，由惯性冲量moment来控制。
-
-作者是几个IEEE，文中有其收敛性证明，先码起来，周末再研究一下，他人的学习笔记可以先参考：https://youyou-tech.com/2019/12/28/%E8%AE%A4%E8%AF%86DiffGrad%EF%BC%9A%E6%96%B0%E5%9E%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BC%98%E5%8C%96%E5%99%A8/
-
-
-### [Image Segmentation Using Deep Learning: A Survey](https://arxiv.org/abs/2001.05566)
-*Shervin Minaee, Yuri Boykov, Fatih Porikli, Antonio Plaza, Nasser Kehtarnavaz, Demetri Terzopoulos*
-> (Submitted on 15 Jan 2020 (v1), last revised 18 Jan 2020 (this version, v2))
-
-Image segmentation is a key topic in image processing and computer vision with applications such as scene understanding, medical image analysis, robotic perception, video surveillance, augmented reality, and image compression, among many others. Various algorithms for image segmentation have been developed in the literature. Recently, due to the success of deep learning models in a wide range of vision applications, there has been a substantial amount of works aimed at developing image segmentation approaches using deep learning models. In this survey, we provide a comprehensive review of the literature at the time of this writing, covering a broad spectrum of pioneering works for semantic and instance-level segmentation, including fully convolutional pixel-labeling networks, encoder-decoder architectures, multi-scale and pyramid based approaches, recurrent networks, visual attention models, and generative models in adversarial settings. We investigate the similarity, strengths and challenges of these deep learning models, examine the most widely used datasets, report performances, and discuss promising future research directions in this area.
-
-
-他人的解读： [纽约大学发布「深度学习图像分割」最新综述论文，带你全面了解100个10大类深度图像分割算法](https://mp.weixin.qq.com/s?__biz=MzU2OTA0NzE2NA==&mid=2247519342&idx=1&sn=ace274849f033eee582276a505181daf&chksm=fc866d7dcbf1e46bc78c5d801bac8f9798929375459ffbd824002f633e9d8b992c984912a845&mpshare=1&scene=1&srcid=&sharer_sharetime=1579425668727&sharer_shareid=c37ff2288ffba696afb85e962505b352&exportkey=A9xRjmvz7Wko1JSHfKjG2kw%3D&pass_ticket=EI%2FDFK6tPBtIaDETwZirN5nq7eNSd%2Fo3sGmtuu1W2cJyeMbALbTZrpzcGHaiit13#rd)
-
-----
-
 ## Paper Set
 
 ### [Gaussian Error Linear Units (GELUs)](https://arxiv.org/abs/1606.08415)Swish
@@ -34,6 +7,7 @@ Image segmentation is a key topic in image processing and computer vision with a
 
 We propose the Gaussian Error Linear Unit (GELU), a high-performing neural network activation function. The GELU nonlinearity is the expected transformation of a stochastic regularizer which randomly applies the identity or zero map to a neuron's input. The GELU nonlinearity weights inputs by their magnitude, rather than gates inputs by their sign as in ReLUs. We perform an empirical evaluation of the GELU nonlinearity against the ReLU and ELU activations and find performance improvements across all considered computer vision, natural language processing, and speech tasks.
 
+---
 
 ### [Learning to segment images with classification labels](https://arxiv.org/abs/1912.12533)
 *Ozan Ciga, Anne L. Martel*
@@ -41,6 +15,7 @@ We propose the Gaussian Error Linear Unit (GELU), a high-performing neural netwo
 
 Two of the most common tasks in medical imaging are classification and segmentation. Either task requires labeled data annotated by experts, which is scarce and expensive to collect. Annotating data for segmentation is generally considered to be more laborious as the annotator has to draw around the boundaries of regions of interest, as opposed to assigning image patches a class label. Furthermore, in tasks such as breast cancer histopathology, any realistic clinical application often includes working with whole slide images, whereas most publicly available training data are in the form of image patches, which are given a class label. We propose an architecture that can alleviate the requirements for segmentation-level ground truth by making use of image-level labels to reduce the amount of time spent on data curation. In addition, this architecture can help unlock the potential of previously acquired image-level datasets on segmentation tasks by annotating a small number of regions of interest. In our experiments, we show using only one segmentation-level annotation per class, we can achieve performance comparable to a fully annotated dataset.
 
+---
 
 ### [Graph-FCN for image semantic segmentation](https://arxiv.org/abs/2001.00335)
 *Yi Lu, Yaran Chen, Dongbin Zhao, Jianxin Chen*
@@ -63,6 +38,23 @@ With the success of deep neural networks, Neural Architecture Search (NAS) as a 
 
 This work aims to identify/bridge the gap between Artificial Intelligence (AI) and Healthcare sides in Japan towards developing medical AI fitting into a clinical environment in five years. Moreover, we attempt to confirm the clinical relevance for diagnosis of our research-proven pathology-aware Generative Adversarial Network (GAN)-based medical image augmentation: a data wrangling and information conversion technique to address data paucity. We hold a clinically valuable AI-envisioning workshop among 2 Medical Imaging experts, 2 physicians, and 3 Healthcare/Informatics generalists. A qualitative/quantitative questionnaire survey for 3 project-related physicians and 6 project non-related radiologists evaluates the GAN projects in terms of Data Augmentation (DA) and physician training. The workshop reveals the intrinsic gap between AI/Healthcare sides and its preliminary solutions on Why (i.e., clinical significance/interpretation) and How (i.e., data acquisition, commercial deployment, and safety/feeling safe). The survey confirms our pathology-aware GANs' clinical relevance as a clinical decision support system and non-expert physician training tool. Radiologists generally have high expectations for AI-based diagnosis as a reliable second opinion and abnormal candidate detection, instead of replacing them. Our findings would play a key role in connecting inter-disciplinary research and clinical applications, not limited to the Japanese medical context and pathology-aware GANs. We find that better DA and expert physician training would require atypical image generation via further GAN-based extrapolation.
 
+
+### [Image Segmentation Using Deep Learning: A Survey](https://arxiv.org/abs/2001.05566)
+*Shervin Minaee, Yuri Boykov, Fatih Porikli, Antonio Plaza, Nasser Kehtarnavaz, Demetri Terzopoulos*
+> (Submitted on 15 Jan 2020 (v1), last revised 18 Jan 2020 (this version, v2))
+
+Image segmentation is a key topic in image processing and computer vision with applications such as scene understanding, medical image analysis, robotic perception, video surveillance, augmented reality, and image compression, among many others. Various algorithms for image segmentation have been developed in the literature. Recently, due to the success of deep learning models in a wide range of vision applications, there has been a substantial amount of works aimed at developing image segmentation approaches using deep learning models. In this survey, we provide a comprehensive review of the literature at the time of this writing, covering a broad spectrum of pioneering works for semantic and instance-level segmentation, including fully convolutional pixel-labeling networks, encoder-decoder architectures, multi-scale and pyramid based approaches, recurrent networks, visual attention models, and generative models in adversarial settings. We investigate the similarity, strengths and challenges of these deep learning models, examine the most widely used datasets, report performances, and discuss promising future research directions in this area.
+
+
+他人的解读： [纽约大学发布「深度学习图像分割」最新综述论文，带你全面了解100个10大类深度图像分割算法](https://mp.weixin.qq.com/s?__biz=MzU2OTA0NzE2NA==&mid=2247519342&idx=1&sn=ace274849f033eee582276a505181daf&chksm=fc866d7dcbf1e46bc78c5d801bac8f9798929375459ffbd824002f633e9d8b992c984912a845&mpshare=1&scene=1&srcid=&sharer_sharetime=1579425668727&sharer_shareid=c37ff2288ffba696afb85e962505b352&exportkey=A9xRjmvz7Wko1JSHfKjG2kw%3D&pass_ticket=EI%2FDFK6tPBtIaDETwZirN5nq7eNSd%2Fo3sGmtuu1W2cJyeMbALbTZrpzcGHaiit13#rd)
+
+### [Unsupervised Scene Adaptation with Memory Regularization in vivo](https://arxiv.org/abs/1912.11164)
+*Zhedong Zheng, Yi Yang*
+> Submitted on 24 Dec 2019 (v1), last revised 26 Jan 2020 (this version, v2)
+
+We consider the unsupervised scene adaptation problem of learning from both labeled source data and unlabeled target data. Existing methods focus on minoring the inter-domain gap between the source and target domains. However, the intra-domain knowledge and inherent uncertainty learned by the network are under-explored. In this paper, we propose an orthogonal method, called memory regularization in vivo to exploit the intra-domain knowledge and regularize the model training. Specifically, we refer to the segmentation model itself as the memory module, and minor the discrepancy of the two classifiers, i.e., the primary classifier and the auxiliary classifier, to reduce the prediction inconsistency. Without extra parameters, the proposed method is complementary to the most existing domain adaptation methods and could generally improve the performance of existing methods. Albeit simple, we verify the effectiveness of memory regularization on two synthetic-to-real benchmarks: GTA5 -> Cityscapes and SYNTHIA -> Cityscapes, yielding +11.1% and +11.3% mIoU improvement over the baseline model, respectively. Besides, a similar +12.0% mIoU improvement is observed on the cross-city benchmark: Cityscapes -> Oxford RobotCar.
+
+---
 
 ### [NAS evaluation is frustratingly hard](https://arxiv.org/abs/1912.12522)
 *Antoine Yang, Pedro M. Esperança, Fabio M. Carlucci*
@@ -104,6 +96,20 @@ Building a large image dataset with high-quality object masks for semantic segme
 > (Submitted on 6 Jan 2020 (v1), last revised 27 Feb 2020 (this version, v2))
 
 This paper introduces a novel contour-based approach named deep snake for real-time instance segmentation. Unlike some recent methods that directly regress the coordinates of the object boundary points from an image, deep snake uses a neural network to iteratively deform an initial contour to the object boundary, which implements the classic idea of snake algorithms with a learning-based approach. For structured feature learning on the contour, we propose to use circular convolution in deep snake, which better exploits the cycle-graph structure of a contour compared against generic graph convolution. Based on deep snake, we develop a two-stage pipeline for instance segmentation: initial contour proposal and contour deformation, which can handle errors in initial object localization. Experiments show that the proposed approach achieves state-of-the-art performances on the Cityscapes, Kins and Sbd datasets while being efficient for real-time instance segmentation, 32.3 fps for 512×512 images on a 1080Ti GPU. The code will be available at this https [URL](https://github.com/zju3dv/snake/).
+
+---
+
+### [diffGrad: An Optimization Method for Convolutional Neural Networks](https://arxiv.org/abs/1909.11015)
+*Shiv Ram Dubey, Soumendu Chakraborty, Swalpa Kumar Roy, Snehasis Mukherjee, Satish Kumar Singh, Bidyut Baran Chaudhuri*
+> (Submitted on 12 Sep 2019 (v1), last revised 6 Mar 2020 (this version, v3))
+
+Stochastic Gradient Decent (SGD) is one of the core techniques behind the success of deep neural networks. The gradient provides information on the direction in which a function has the steepest rate of change. The main problem with basic SGD is to change by equal sized steps for all parameters, irrespective of gradient behavior. Hence, an efficient way of deep network optimization is to make adaptive step sizes for each parameter. Recently, several attempts have been made to improve gradient descent methods such as AdaGrad, AdaDelta, RMSProp and Adam. These methods rely on the square roots of exponential moving averages of squared past gradients. Thus, these methods do not take advantage of local change in gradients. In this paper, a novel optimizer is proposed based on the difference between the present and the immediate past gradient (i.e., diffGrad). In the proposed diffGrad optimization technique, the step size is adjusted for each parameter in such a way that it should have a larger step size for faster gradient changing parameters and a lower step size for lower gradient changing parameters. The convergence analysis is done using the regret bound approach of online learning framework. Rigorous analysis is made in this paper over three synthetic complex non-convex functions. The image categorization experiments are also conducted over the CIFAR10 and CIFAR100 datasets to observe the performance of diffGrad with respect to the state-of-the-art optimizers such as SGDM, AdaGrad, AdaDelta, RMSProp, AMSGrad, and Adam. The residual unit (ResNet) based Convolutional Neural Networks (CNN) architecture is used in the experiments. The experiments show that diffGrad outperforms other optimizers. Also, we show that diffGrad performs uniformly well for training CNN using different activation functions. The source code is made publicly available at this https [URL](https://github.com/shivram1987/diffGrad).
+
+文章提出SGD的问题在于迭代过程中相等的步长，不会根据梯度表现自适应。AdaGrad、AdaDelta、RMSProp、Adam都在提高梯度下降的方法，然而这些方法依赖于梯度平方的指数移动平均的平方跟，并没有利用到梯度的局部变化。本文提出了一种新的diffGrad，梯度下降的步长会自适应变化，并给出了收敛行证明。并公开了代码。
+
+diffGrad将当前和过去迭代的梯度差异（即短期梯度变化信息）与Adam优化技术结合在一起来控制优化过程的学习率。diffGrad在梯度变化大的时候得到一个更高的学习率，在梯度变化小的地方得到一个低的学习率。为了避免陷入局部最优或者鞍点，由惯性冲量moment来控制。
+
+作者是几个IEEE，文中有其收敛性证明，先码起来，周末再研究一下，他人的学习笔记可以先参考：https://youyou-tech.com/2019/12/28/%E8%AE%A4%E8%AF%86DiffGrad%EF%BC%9A%E6%96%B0%E5%9E%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BC%98%E5%8C%96%E5%99%A8/
 
 
 ### [FarSee-Net: Real-Time Semantic Segmentation by Efficient Multi-scale Context Aggregation and Feature Space Super-resolution](https://128.84.21.199/abs/2003.03913)
@@ -160,4 +166,16 @@ To better retain the deep features of an image and solve the sparsity problem of
 > (Submitted on 28 Nov 2019 (v1), last revised 30 Mar 2020 (this version, v2))
 
 Unsupervised Domain Adaptation (UDA) is crucial to tackle the lack of annotations in a new domain. There are many multi-modal datasets, but most UDA approaches are uni-modal. In this work, we explore how to learn from multi-modality and propose cross-modal UDA (xMUDA) where we assume the presence of 2D images and 3D point clouds for 3D semantic segmentation. This is challenging as the two input spaces are heterogeneous and can be impacted differently by domain shift. In xMUDA, modalities learn from each other through mutual mimicking, disentangled from the segmentation objective, to prevent the stronger modality from adopting false predictions from the weaker one. We evaluate on new UDA scenarios including day-to-night, country-to-country and dataset-to-dataset, leveraging recent autonomous driving datasets. xMUDA brings large improvements over uni-modal UDA on all tested scenarios, and is complementary to state-of-the-art UDA techniques. Code is available at this https URL.
+
+---
+
+### [YOLOv4: Optimal Speed and Accuracy of Object Detection](https://arxiv.org/abs/2004.10934)
+*Alexey Bochkovskiy, Chien-Yao Wang, Hong-Yuan Mark Liao*
+> (Submitted on 23 Apr 2020)
+
+There are a huge number of features which are said to improve Convolutional Neural Network (CNN) accuracy. Practical testing of combinations of such features on large datasets, and theoretical justification of the result, is required. Some features operate on certain models exclusively and for certain problems exclusively, or only for small-scale datasets; while some features, such as batch-normalization and residual-connections, are applicable to the majority of models, tasks, and datasets. We assume that such universal features include Weighted-Residual-Connections (WRC), Cross-Stage-Partial-connections (CSP), Cross mini-Batch Normalization (CmBN), Self-adversarial-training (SAT) and Mish-activation. We use new features: WRC, CSP, CmBN, SAT, Mish activation, Mosaic data augmentation, CmBN, DropBlock regularization, and CIoU loss, and combine some of them to achieve state-of-the-art results: 43.5% AP (65.7% AP50) for the MS COCO dataset at a realtime speed of ~65 FPS on Tesla V100. Source code is at [this https URL](https://github.com/AlexeyAB/darknet)
+
+
+
+
 
